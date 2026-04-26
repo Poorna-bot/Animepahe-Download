@@ -16,7 +16,7 @@ async function getKwikDirectData(url) {
     // Heroku වලදී Chrome තියෙන තැන සහ අවහිරතා මගහැරීමට args භාවිතා කරයි
     const browser = await puppeteer.launch({
         headless: "new",
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || null,
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || 'google-chrome-stable'
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
